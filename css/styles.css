@@ -59,16 +59,16 @@ nav ul li a {
 }
 
 .hey {
-    color: #39bfbd;
+    color: #2A60C8;
     font-weight: 500;
     font-size: 0.9rem;
-    border-bottom: 2px solid #40c6c4;
+    border-bottom: 2px solid #2A60C8;
 }
 
 nav ul li a:hover {
-    background-color: #2adabc;
+    background-color: #2A60C8;
     color: #FFFFFF;
-    box-shadow: 5px 10px 30px rgba(64, 198, 196, 0.3);
+    box-shadow: 5px 10px 30px rgba(64, 106, 198, 0.3);
     transition: all ease 0.2s;
 }
 
@@ -76,6 +76,7 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    
 }
 
 .model {
@@ -109,20 +110,24 @@ nav ul li a:hover {
     color: #747474;
 }
 
-.portfolio-btn {
+.portfolio-btn,
+.recent-btn,
+.client-box a {
     width: 190px;
     height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
-    background-color: #1db096;
+    background-color: #5689e7;
     border-radius: 20px;
-    box-shadow: 4px 10px 30px rgba(24, 139, 119, 0.2);
+    box-shadow: 4px 10px 30px rgba(33, 62, 143, 0.2);
 }
 
-.portfolio-btn:hover {
-    background-color: #23cdaf;
+.portfolio-btn:hover, 
+.recent-btn:hover,
+.client-box a:hover {
+    background-color: #2A60C8;
     transition: all ease 0.2s;
 }
 
@@ -140,17 +145,21 @@ nav ul li a:hover {
 
 .skill-img {
     width: 600px;
-    height: 600px;
+    height: 600px;   
 }
 
-.skill-text img {
+.skill-img img{
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
+.skill-text{
+    width: 400px;
+}
+
 .skill-heading span {
-    color: #36b7b5;
+    color: #2A60C8;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -163,4 +172,174 @@ nav ul li a:hover {
     margin: 0px;
     font-weight: 400;
     letter-spacing: 1px;
+}
+
+.s-box-container{
+    margin-top: 30px;
+}
+
+.skill-box {
+    display: flex;
+    margin: 25px 0px;
+}
+
+.s-box-icon{
+    margin-right: 12px;
+}
+
+.s-box-icon {
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-size: 1.1rem;
+}
+
+.s-box-text strong {
+    color: #1c3548;
+    margin: 0px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.s-box-text p{
+    color: #747474;
+    font-size: 0.9rem;
+}
+
+.fa-html5{
+    color: #e06061;
+}
+
+.fa-css3-alt{
+    color: #416cdf;
+}
+
+.fa-js-square{
+    color: #f98231;
+}
+
+#recent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+    flex-direction: column;
+}
+
+.recent-heading span,
+.client-heading span{
+    color: #2A60C8;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+.recent-heading h3,
+.client-heading h3{
+    color: #1c3548;
+    font-size: 3rem;
+    margin: 0px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.recent-img{
+    margin: 0px 40px;
+}
+
+.recent-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.recent-btn{
+    width: 190px;
+    margin-top: -20px;
+}
+
+#client{
+    width: 100%;
+    border-top: 1px solid rgba(58, 58, 58, 0.03);
+    border-bottom: 1px solid rgba(58, 58, 58, 0.03);
+    padding: 50px 0px;
+    background-position: center;
+    background-size: 1000px;
+    background-color: #60dce0;
+}
+
+.client-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.c-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
+.client-box {
+    width: 310px;
+    height: 350px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: content;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.client-box img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client-box strong{
+    color: #1c3548;
+    margin: 0px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.star{
+    display: flex;
+    margin: 5px 0px 10px 0px;
+}
+
+.fa-star{
+    color: #ff9529;
+}
+.client-box p{
+    color: #747474;
+    font-size: 0.9rem;
+    margin: 0px;
+    text-align: center;
+    display: block;
+    display: -webkit-box;
+    max-width: 80%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.client-box a{
+    width: 140px;
+    margin-top: 20px;
+    border-radius: 0px;
 }
