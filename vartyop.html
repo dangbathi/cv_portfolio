@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/vatyop.css">
+    <title>Variable type</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section id="tongsonguyen" class="modal">
+            <div class="title">
+                <h2>Tính tổng 2 số nguyên</h2>
+            </div>
+            <div class="content">
+                <input type="text" id="a" placeholder="Nhập số a">
+                <input type="text" id="b" placeholder="Nhập số b">
+            </div>
+            <div class="footer">
+                <button type="submit" id="tinhtong" class="btn" onclick="tong_hai_so()">Tính tổng</button>
+                <h2 id="result" class="kq"></h2>
+            </div>
+        </section>
+        <section id="hienngaythangnam" class="modal">
+            <div class="title">
+                <h2>Hiển thị ngày - tháng - năm</h2>
+            </div>
+            <div class="content">
+                <input type="text" name="day" id="d" placeholder="Nhập ngày">
+                <input type="text" name="month" id="m" placeholder="Nhập tháng">
+                <input type="text" name="day" id="y" placeholder="Nhập năm">
+            </div>
+            <div class="footer">
+                <button type="submit" class="btn" onclick="hien_ngay_thang()">Submit</button>
+                <h2 id="result1" class="kq"></h2>
+            </div>
+        </section>
+        <section id="chuvidientich" class="modal">
+            <div class="title">
+                <h2>Chu vi diện tích hình tròn</h2>
+            </div>
+            <div class="content">
+                <input type="text" name="bankinh" id="r" placeholder="Nhập bán kính hình tròn">
+            </div>
+            <div class="footer">
+                <button type="submit" class="btn" onclick="chu_vi_dien_tich_hinh_tron()">Submit</button>
+                <h2 id="result2" class="kq"></h2>
+                <h2 id="result3" class="kq"></h2>
+            </div>
+        </section>
+        <section id="laisuatbank" class="modal">
+            <div class="title">
+                <h2>Tính lãi suất Bank</h2>
+            </div>
+            <div class="content">
+                <input type="text" name="name" id="ten">
+                <input type="text" name="address" id="diachi">
+                <input type="date" name="time" id="thoigian>
+            </div>
+            <div class=" footer">
+                <button type="submit" class="btn">Submit</button>
+                <h2 id="result4" class="kq">
+                    <p>
+                        Joe thương nhớ,
+                        Em không biết phải nói sao để anh hiểu rằng, em nhớ anh thật nhiều. Em yêu anh đến khi trái tim này tan thành nghìn mảnh. 
+                        Tất cả những gì em yêu thương, em khát khao và cần đến, chính là anh, mãi mãi về sau. 
+                        Em chỉ muốn ở bên anh, và anh yêu hỡi, em sẽ trở thành người phụ nữ như anh mong muốn.
+                        Có phải em thật tệ hại, khi cứ nghĩ đến anh thật nhiều, thật lâu và nhất là mỗi khi đêm xuống? Em hứa sẽ sẽ cố gắng triệu triệu lần hơn thế. 
+                        Nhưng hơn tất cả, em chỉ mong một ngày nào đó, anh sẽ tự hào về em, như tự hào về vợ của anh, và mẹ của các con anh (ít nhất là 2 nhé, em vừa mới quyết định đấy!). 
+                        Em nhớ thật nhiều cảm giác mỗi đêm anh ôm em và ru em ngủ trong vòng tay. 
+                        Đêm nay, em chỉ muốn được gần bên anh… và anh biết không, trái tim em đang đau đớn đến nhường nào.
+                        Anh yêu thương, đừng bao giờ rời xa em nữa nhé. Yêu anh rất nhiều.
+                        Los Angeles, ngày 10 tháng 10 năm 1951.
+                    </p>
+                </h2>
+            </div>
+        </section>
+        <section id="noidungthu" class="modal">
+            <div class="title">
+                <h2>In nội dung thư</h2>
+            </div>
+            <div class="content">
+
+            </div>
+            <div class="footer">
+                <button type="submit" class="btn">Submit</button>
+                <h2 id="result5" class="kq"></h2>
+            </div>
+        </section>
+        <section id="doitiente" class="modal">
+            <div class="title">
+                <h2>Chuyển đổi tiền tệ</h2>
+            </div>
+            <div class="content">
+
+            </div>
+            <div class="footer">
+                <button type="submit" class="btn">Submit</button>
+                <h2 id="result6" class="kq"></h2>
+            </div>
+        </section>
+        <section id="doitiente" class="modal">
+            <div class="title">
+                <h2>Hiện Tuổi</h2>
+            </div>
+            <div class="content">
+                <input type="date" id="namsinh" />
+            </div>
+            <div class="footer">
+                <button type="submit" class="btn" onclick="tinh_tuoi()">Submit</button>
+                <h2 id="result7" class="kq"></h2>
+                <h2 id="result8" class="kq"></h2>
+            </div>
+        </section>
+    </div>
+    <script src="./js/vatyop.js"></script>
+</body>
+
+</html>
