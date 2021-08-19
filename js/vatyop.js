@@ -50,6 +50,7 @@ function noi_dung_thu(){
     name = document.getElementById('ten').value;
     address = document.getElementById('diachi').value;
     time = document.getElementById('thoigian').value;
+    date = new Date(time);
     if(!name){
         alert('Vui lòng nhập tên');
     }else if(!address){
@@ -57,7 +58,9 @@ function noi_dung_thu(){
     }else if(!time){
         alert('Vui lòng chọn thời gian');
     }else{
-        document.getElementById('result4').innerHTML = "";
+        document.getElementById('result5').style.display = 'block';
+        document.getElementById('inTen').innerHTML = name + " thương nhớ ,";
+        document.getElementById('add_date').innerHTML = address + ", Ngày "+date.getDate()+" tháng "+date.getMonth()+" năm "+date.getFullYear();
     }
 }
 

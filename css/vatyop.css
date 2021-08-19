@@ -88,14 +88,15 @@ input[type=text], input[type=date] {
     font-size: 1.2rem;
 }
 
-#result4{
+#result5{
+    display: none;
     font-size: 0.8rem;
     text-align: left;
     border: solid 1px;
     width: 100%;
 }
 
-#result4 p{
+#result5 p{
     width: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 0.7rem;
