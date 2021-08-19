@@ -5,84 +5,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/vatyop.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Variable type</title>
 </head>
 
 <body>
-    <a href="./index.html" >Home</a>
+    <!-- navigation -->
+    <nav>
+        <!-- logo -->
+        <a href="#" class="logo">
+            <img src="./images/Logo1.png" />
+        </a>
+        <!-- menu -->
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Recent</a></li>
+            <li class="dropdown">
+                <a href="#">Bài tập Code Gym</a>
+                <div class="dropdown-content">
+                    <a href="./vartyop.html">Variable</a>
+                    <a href="./caculator.html">Calculator</a>
+                </div>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- say-hey -->
+        <a href="#" class="hey">Say Hi!</a>
+    </nav>
+
+    <!--------------------- CONTENT - VTO ------------------>
     <div class="wrapper">
         <!-------------- Tong 2 so nguyen --------------->
         <section id="tongsonguyen" class="modal">
-            <div class="title">
+            <div class="title_cards">
                 <h2>Tính tổng 2 số nguyên</h2>
             </div>
-            <div class="content">
+            <div class="content_vto">
                 <input type="text" id="a" placeholder="Nhập số a">
                 <input type="text" id="b" placeholder="Nhập số b">
             </div>
-            <div class="footer">
-                <button type="submit" id="tinhtong" class="btn" onclick="tong_hai_so()">Tính tổng</button>
+            <div class="footer_cards">
+                <button type="submit" id="tinhtong" class="btn_vto" onclick="tong_hai_so()">Tính tổng</button>
                 <h2 id="result" class="kq"></h2>
             </div>
         </section>
 
         <!-------------- Hiện ngày tháng năm nhập vào --------------->
         <section id="hienngaythangnam" class="modal">
-            <div class="title">
+            <div class="title_cards">
                 <h2>Hiển thị ngày - tháng - năm</h2>
             </div>
-            <div class="content">
+            <div class="content_vto">
                 <input type="text" name="day" id="d" placeholder="Nhập ngày">
                 <input type="text" name="month" id="m" placeholder="Nhập tháng">
                 <input type="text" name="day" id="y" placeholder="Nhập năm">
             </div>
-            <div class="footer">
-                <button type="submit" class="btn" onclick="hien_ngay_thang()">Submit</button>
+            <div class="footer_cards">
+                <button type="submit" class="btn_vto" onclick="hien_ngay_thang()">Submit</button>
                 <h2 id="result1" class="kq"></h2>
             </div>
         </section>
 
         <!-------------- Tính chu vi và diện tích hình tròn --------------->
         <section id="chuvidientich" class="modal">
-            <div class="title">
+            <div class="title_cards">
                 <h2>Chu vi diện tích hình tròn</h2>
             </div>
-            <div class="content">
+            <div class="content_vto">
                 <input type="text" name="bankinh" id="r" placeholder="Nhập bán kính hình tròn">
             </div>
-            <div class="footer">
-                <button type="submit" class="btn" onclick="chu_vi_dien_tich_hinh_tron()">Submit</button>
+            <div class="footer_cards">
+                <button type="submit" class="btn_vto" onclick="chu_vi_dien_tich_hinh_tron()">Submit</button>
                 <h2 id="result2" class="kq"></h2>
                 <h2 id="result3" class="kq"></h2>
             </div>
         </section>
 
-        <!-------------- iinh lai suat bank --------------->
-        <section id="laisuatbank" class="modal">
-            <div class="title">
-                <h2>Tính lãi suất Bank</h2>
-            </div>
-            <div class="content">
-
-            </div>
-            <div class=" footer">
-
-            </div>
-        </section>
-
         <!-------------- Hien noi dung thu --------------->
         <section id="noidungthu" class="modal">
-            <div class="title">
+            <div class="title_cards">
                 <h2>In nội dung thư</h2>
             </div>
-            <div class="content">
+            <div class="content_vto">
                 <input type="text" name="name" id="ten" placeholder="Nhập tên">
                 <input type="text" name="address" id="diachi" placeholder="Nhập địa chỉ">
                 <input type="date" name="time" id="thoigian">
             </div>
-            <div class="footer">
-                <button type="submit" class="btn" onclick="noi_dung_thu()">Submit</button>
+            <div class="footer_cards">
+                <button type="submit" class="btn_vto" onclick="noi_dung_thu()">Submit</button>
                 <h2 id="result5" class="kq">
 
                     <p id="inTen"> thương nhớ,</p>
@@ -112,26 +123,28 @@
 
         <!-------------- Chuyen doi tien te --------------->
         <section id="doitiente" class="modal">
-            <div class="title">
+            <div class="title_cards">
                 <h2>Chuyển đổi tiền tệ</h2>
             </div>
-            <div class="content">
+            <div class="content_vto">
 
             </div>
-            <div class="footer">
-                <button type="submit" class="btn">Submit</button>
+            <div class="footer_cards">
+                <button type="submit" class="btn_vto">Submit</button>
                 <h2 id="result6" class="kq"></h2>
             </div>
         </section>
-        <section id="doitiente" class="modal">
-            <div class="title">
+
+        <!-------------- Tinh tuoi hien tai --------------->
+        <section id="tinhtuoi" class="modal">
+            <div class="title_cards">
                 <h2>Tính tuổi hiện tại</h2>
             </div>
-            <div class="content">
+            <div class="content_vto">
                 <input type="date" id="namsinh" />
             </div>
-            <div class="footer">
-                <button type="submit" class="btn" onclick="tinh_tuoi()">Submit</button>
+            <div class="footer_cards">
+                <button type="submit" class="btn_vto" onclick="tinh_tuoi()">Submit</button>
                 <h2 id="result7" class="kq"></h2>
                 <h2 id="result8" class="kq"></h2>
             </div>

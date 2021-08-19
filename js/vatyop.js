@@ -1,3 +1,8 @@
+function clear_box(){
+    document.getElementsByTagName("input").value = '';
+
+}
+
 function tong_hai_so(){
     let a,b;
     a = +document.getElementById('a').value;
@@ -82,4 +87,24 @@ function tinh_tuoi(){
     }
     document.getElementById('result7').innerHTML = tuoi + " tuổi";
     document.getElementById('result8').style.display = 'none';
+}
+
+function tinh_lai_suat_don(){
+    let tiengui,time;
+    const ls = 6.5;
+    tiengui = +document.getElementById('tiengui').value;
+    time = +document.getElementById('time').value;
+    if(!tiengui){
+        alert('vui lòng nhập số tiền vốn');
+    }else if(tiengui>=50000){
+        if(!time){
+            alert('vui lòng chọn kỳ hạn');
+        }else{
+            tlai = tiengui*ls/100;
+            total = tiengui+time*tlai;
+            document.getElementById('result4').innerHTML = "Tổng tiền khi đáo hạn: "+total+" VNĐ";
+        }
+    }else{
+        alert('số tiền tối thiểu 50.000 VNĐ')
+    }
 }

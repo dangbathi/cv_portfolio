@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/vatyop.css">
+    <title>Tính Lãi Bank</title>
+</head>
+<body>
+     <!-------------- iinh lai suat bank --------------->
+     <section id="laisuatbank" class="modal">
+        <div class="title">
+            <h2>Tính lãi suất Bank</h2>
+        </div>
+        <div class="content">
+            <input type="number" id="tiengui" placeholder="Nhập số tiền gửi">
+            <input type="number" id="time" placeholder="Nhập kỳ hạn">
+        </div>
+        <div class=" footer">
+            <button type="submit" class="btn" onclick="tinh_lai_suat_don()">Submit</button>
+            <h2 id="result4"></h2>
+        </div>
+    </section>
+    <script src="./js/vatyop.js"></script>
+</body>
+</html>
