@@ -59,7 +59,7 @@ function noi_dung_thu(){
         alert('Vui lòng chọn thời gian');
     }else{
         document.getElementById('result5').style.display = 'block';
-        document.getElementById('inTen').innerHTML = name + " thương nhớ ,";
+        document.getElementById('inTen').innerHTML = name + " thương nhớ,";
         document.getElementById('add_date').innerHTML = address + ", Ngày "+date.getDate()+" tháng "+date.getMonth()+" năm "+date.getFullYear();
     }
 }

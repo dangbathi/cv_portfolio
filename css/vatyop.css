@@ -92,7 +92,6 @@ input[type=text], input[type=date] {
     display: none;
     font-size: 0.8rem;
     text-align: left;
-    border: solid 1px;
     width: 100%;
 }
 
