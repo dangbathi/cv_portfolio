@@ -75,6 +75,10 @@ input[type=number] {
     transition: all ease 0.2s;
 }
 
+.btn_tuoi{
+    width: 40%;
+}
+
 .kq{
     margin-top: 10px;
     width: 100%;
@@ -99,6 +103,7 @@ input[type=number] {
     text-align: center;
     margin-top: 20px;
 }
+
 
 /* -------------------------- home-index ------------------------ */
 ul {
@@ -532,3 +537,4 @@ nav ul li a:hover {
     font-size: 2.5rem;
     
 }
+

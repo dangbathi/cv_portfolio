@@ -77,15 +77,19 @@ function tinh_tuoi(){
     today = new Date();
     tuoi = today.getFullYear() - date.getFullYear();
     m = today.getMonth() - date.getMonth();
-    console.log(m);
+    d = today.getDate() - date.getDate();
     if(m < 0 || (m >= 0 && today.getDate() < date.getDate())){
         tuoi--;
-        m = Math.abs(m);
-        d = Math.abs(today.getDate() - date.getDate());
         document.getElementById('result7').innerHTML = tuoi + " tuổi";
-        document.getElementById('result8').innerHTML = "Bạn còn: " +m+ " tháng và: " + d + " ngày là đến sinh nhật";
+        document.getElementById('result8').innerHTML = "Bạn còn: " + Math.abs(m)+ " tháng và: " +  Math.abs(d) + " ngày là đến sinh nhật";
     }
-    document.getElementById('result7').innerHTML = tuoi + " tuổi";
+    document.getElementById('result7').innerHTML = tuoi + " tuổi " + Math.abs(m) + " tháng " + Math.abs(d) + " ngày";
+}
+
+function reset_tuoi(){
+    document.getElementById('namsinh').value = '';
+    document.getElementById('result7').innerHTML = '';
+    document.getElementById('result8').innerHTML = '';
 }
 
 function tinh_lai_suat_don(){
