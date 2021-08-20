@@ -117,8 +117,8 @@ function tinh_lai_suat_don() {
 function doi_tien() {
     let amount, fCurrency, tCurrency, currency;
     amount = +document.getElementById('amount').value;
-    fCurrency = document.getElementById('fCurrency').value;
-    tCurrency = document.getElementById('tCurrency').value;
+    fCurrency = +document.getElementById('fCurrency').value;
+    tCurrency = +document.getElementById('tCurrency').value;
     currency = +document.getElementById('currency').value;
     if(!amount){
         alert('vui lòng nhập số tiền');
