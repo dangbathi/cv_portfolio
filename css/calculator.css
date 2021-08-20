@@ -10,7 +10,7 @@ body{
     background: #5372f0;
 }
 
-.wrapper{
+.wrapper_cal{
     width: 350px;
     height: 480px;
     margin: 65px auto;
@@ -19,7 +19,7 @@ body{
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-#display{
+#display_cal{
     border: none;
     outline: none;
     width: 330px;
@@ -38,7 +38,7 @@ body{
     margin: 35px 15px;
 }
 
-.btn{
+.btn_cal{
     width: 60px;
     margin: 8px;
     height: 60px;
@@ -51,21 +51,21 @@ body{
     color: #5e5858;
 }
 
-.btn:hover{
+.btn_cal:hover{
     background: rgba(0, 0, 0, 0.1);
 }
 
-.cbtn, .cbtn:hover{
+.cbtn_cal, .cbtn_cal:hover{
     background: red;
     color: white;
 }
 
-.mbtn, .mbtn:hover{
+.mbtn_cal, .mbtn_cal:hover{
     background: tomato;
     color: white;
 }
 
-h2{
+h2 .title_cal{
     text-align: center;
     color: white;
     margin: 30px auto;

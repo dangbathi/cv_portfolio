@@ -4,35 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/calculator.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Calculator</title>
 </head>
-<body>
-    <h2>Calculator</h2>
-    <div class="wrapper">
+<body class="bg_cal">
+    <!-- navigation -->
+    <nav>
+        <!-- logo -->
+        <a href="./index.html" class="logo">
+            <img src="./images/Logo1.png" />
+        </a>
+        <!-- menu -->
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Recent</a></li>
+            <li class="dropdown">
+                <a href="#">Bài tập Code Gym</a>
+                <div class="dropdown-content">
+                    <a href="./vartyop.html">Variable</a>
+                    <a href="./caculator.html">Calculator</a>
+                </div>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- say-hey -->
+        <a href="#" class="hey">Say Hi!</a>
+    </nav>
+    
+    <!-------------------- Content - Calculator ---------------------->
+    <h2 class="title_cal">Calculator</h2>
+    <div class="wrapper_cal">
             <form action="" name="cal">
-            <input type="text" name="diskplay" id="display" placeholder="0" readonly>
+            <input type="text" name="diskplay" id="display_cal" placeholder="0" readonly>
             <br>
             <div class="buttons-box">
-                <input type="button" value="7" class="btn" onclick="cal.display.value +='7'">
-                <input type="button" value="8" class="btn" onclick="cal.display.value +='8'">
-                <input type="button" value="9" class="btn" onclick="cal.display.value +='9'">
-                <input type="button" value="+" class="btn mbtn" onclick="cal.display.value +='+'">
+                <input type="button" value="7" class="btn_cal" onclick="cal.display_cal.value +='7'">
+                <input type="button" value="8" class="btn_cal" onclick="cal.display_cal.value +='8'">
+                <input type="button" value="9" class="btn_cal" onclick="cal.display_cal.value +='9'">
+                <input type="button" value="+" class="btn_cal mbtn_cal" onclick="cal.display_cal.value +='+'">
                 <br>
-                <input type="button" value="4" class="btn" onclick="cal.display.value +='4'">
-                <input type="button" value="5" class="btn" onclick="cal.display.value +='5'">
-                <input type="button" value="6" class="btn" onclick="cal.display.value +='6'">
-                <input type="button" value="-" class="btn mbtn" onclick="cal.display.value +='-'">
+                <input type="button" value="4" class="btn_cal" onclick="cal.display_cal.value +='4'">
+                <input type="button" value="5" class="btn_cal" onclick="cal.display_cal.value +='5'">
+                <input type="button" value="6" class="btn_cal" onclick="cal.display_cal.value +='6'">
+                <input type="button" value="-" class="btn_cal mbtn_cal" onclick="cal.display_cal.value +='-'">
                 <br>
-                <input type="button" value="1" class="btn" onclick="cal.display.value +='1'">
-                <input type="button" value="2" class="btn" onclick="cal.display.value +='2'">
-                <input type="button" value="3" class="btn" onclick="cal.display.value +='3'">
-                <input type="button" value="*" class="btn mbtn" onclick="cal.display.value +='*'">
+                <input type="button" value="1" class="btn_cal" onclick="cal.display_cal.value +='1'">
+                <input type="button" value="2" class="btn_cal" onclick="cal.display_cal.value +='2'">
+                <input type="button" value="3" class="btn_cal" onclick="cal.display_cal.value +='3'">
+                <input type="button" value="*" class="btn_cal mbtn_cal" onclick="cal.display_cal.value +='*'">
                 <br>
-                <input type="button" value="C" class="btn cbtn" onclick="cal.display.value =''">
-                <input type="button" value="0" class="btn" onclick="cal.display.value +='0'">
-                <input type="button" value="/" class="btn mbtn" onclick="cal.display.value +='/'">
-                <input type="button" value="=" class="btn mbtn" onclick="cal.display.value = eval(cal.display.value)">
+                <input type="button" value="C" class="btn_cal cbtn_cal" onclick="cal.display_cal.value =''">
+                <input type="button" value="0" class="btn_cal" onclick="cal.display_cal.value +='0'">
+                <input type="button" value="/" class="btn_cal mbtn_cal" onclick="cal.display_cal.value +='/'">
+                <input type="button" value="=" class="btn_cal mbtn" onclick="cal.display_cal.value = eval(cal.display_cal.value)">
                 <br>
             </div>
         </form>

@@ -462,3 +462,72 @@ nav ul li a:hover {
     border-radius: 0px;
 }
 
+/* ---------------------- Calculator -------------------------- */
+
+.bg_cal{
+    background: #5372f0
+}
+
+.wrapper_cal{
+    width: 350px;
+    height: 480px;
+    margin: 65px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+#display_cal{
+    margin: 0;
+    border: none;
+    outline: none;
+    width: 350px;
+    height: 80px;
+    color: #5e5858;
+    font-size: 58px;
+    font-weight: 700;
+    padding: 10px;
+    text-align: right;
+    background: #2abe4b;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.buttons-box{
+    margin: 35px 15px;
+}
+
+.btn_cal{
+    width: 60px;
+    margin: 8px;
+    height: 60px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 30px;
+    border-radius: 20%;
+    color: #5e5858;
+}
+
+.btn_cal:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.cbtn_cal, .cbtn_cal:hover{
+    background: red;
+    color: white;
+}
+
+.mbtn_cal, .mbtn_cal:hover{
+    background: tomato;
+    color: white;
+}
+
+h2 .title_cal{
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
