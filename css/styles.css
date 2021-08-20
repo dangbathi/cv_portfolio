@@ -471,7 +471,7 @@ nav ul li a:hover {
 .wrapper_cal{
     width: 350px;
     height: 480px;
-    margin: 65px auto;
+    margin: 35px auto;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -524,10 +524,11 @@ nav ul li a:hover {
     color: white;
 }
 
-h2 .title_cal{
+.title_cal{
     text-align: center;
-    color: white;
-    margin-top: 80px;
+    color: #fff;
+    margin-top: 100px;
     font-weight: 700;
     font-size: 2.5rem;
+    
 }
