@@ -123,19 +123,8 @@ function doi_tien() {
     if(!amount){
         alert('vui lòng nhập số tiền');
     }else if(amount>0){
-        if(fCurrency == tCurrency){
-            document.getElementById('currency').placeholder = amount;
-        }else if(fCurrency == "VND" && tCurrency == "USD"){
-            currency = amount/23000;
-            document.getElementById('currency').placeholder = currency;
-        }else if(fCurrency == "VND" && tCurrency == "EUR"){
-            currency = amount/27000;
-            document.getElementById('currency').placeholder = currency;
-        }else if(fCurrency == "VND" && tCurrency == "BAN"){
-            currency = amount/31000;
-            document.getElementById('currency').placeholder = currency;
-        }
-        
+        currency = amount*tCurrency/fCurrency;
+        document.getElementById('currency').placeholder = currency;
     }else{
         alert('số tiền phải lớn hơn 0')
     }
