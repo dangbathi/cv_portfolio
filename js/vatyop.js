@@ -78,7 +78,7 @@ function tinh_tuoi(){
     tuoi = today.getFullYear() - date.getFullYear();
     m = today.getMonth() - date.getMonth();
     console.log(m);
-    if(m < 0 || (m === 0 && today.getDate() < date.getDate())){
+    if(m < 0 || (m >= 0 && today.getDate() < date.getDate())){
         tuoi--;
         m = Math.abs(m);
         d = Math.abs(today.getDate() - date.getDate());
@@ -86,7 +86,6 @@ function tinh_tuoi(){
         document.getElementById('result8').innerHTML = "Bạn còn: " +m+ " tháng và: " + d + " ngày là đến sinh nhật";
     }
     document.getElementById('result7').innerHTML = tuoi + " tuổi";
-    document.getElementById('result8').style.display = 'none';
 }
 
 function tinh_lai_suat_don(){
