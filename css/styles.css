@@ -24,6 +24,7 @@ body {
   min-width: 300px;
   box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
   float: left;
+  background: #fff;
 }
 
 
@@ -103,10 +104,6 @@ input[type="number"] {
 .footer_cards {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 0;
-  background: khaki;
-  bottom: 0;
-  padding: 5px;
 }
 
 #amount, #currency ,.sl_c{
