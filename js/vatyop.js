@@ -26,6 +26,8 @@ function hien_ngay_thang() {
                 alert('vui lòng nhập năm');
             } else if (y >= 1000 && y < 9999) {
                 document.getElementById('result1').innerHTML = 'ngày ' + d + ' tháng ' + m + ' năm ' + y;
+            } else {
+                alert('Năm phải lớn hơn hoặc bằng 1000 và nhỏ hơn hoặc bằng 9999');
             }
         } else {
             alert('Tháng phải lớn hơn hoặc bằng 1 và nhỏ hơn hoặc bằng 12');
@@ -120,13 +122,13 @@ function doi_tien() {
     fCurrency = +document.getElementById('fCurrency').value;
     tCurrency = +document.getElementById('tCurrency').value;
     currency = +document.getElementById('currency').value;
-    if(!amount){
+    if (!amount) {
         alert('vui lòng nhập số tiền');
-    }else if(amount>0){
-        currency = amount*tCurrency/fCurrency;
+    } else if (amount > 0) {
+        currency = amount * tCurrency / fCurrency;
         document.getElementById('currency').placeholder = currency;
-    }else{
+    } else {
         alert('số tiền phải lớn hơn 0')
     }
-    
+
 }
