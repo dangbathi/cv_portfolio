@@ -13,31 +13,32 @@ body {
 .wrapper {
   justify-content: space-between;
   margin-top: 80px;
+  
 }
 
-.modal {
+.card {
   width: 20%;
   min-height: 350px;
-  background-color: #ffffff;
   border-radius: 10px;
-  padding: 0;
   margin: 20px;
   min-width: 300px;
   box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
   float: left;
 }
 
+
+
 .title_cards {
-  background-color: rgb(27, 139, 214);
-  height: 40px;
-  padding: 0;
-  margin: 0;
+  background: rgb(27, 139, 214);
   color: #ffffff;
   text-align: center;
   line-height: 40px;
   border-radius: 10px 10px 0px 0px;
   font-size: 0.8rem;
   font-weight: 500;
+  outline: none;
+  padding: 1px;
+  border: none;
 }
 
 .content_vto {
@@ -102,6 +103,10 @@ input[type="number"] {
 .footer_cards {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 0;
+  background: khaki;
+  bottom: 0;
+  padding: 5px;
 }
 
 #amount, #currency ,.sl_c{
@@ -483,7 +488,7 @@ nav ul li a:hover {
   background: #5372f0;
 }
 
-.wrapper_cal {
+.wrapper_cal{
   width: 350px;
   height: 480px;
   margin: 35px auto;
