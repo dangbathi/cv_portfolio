@@ -72,9 +72,16 @@ function noi_dung_thu() {
 }
 
 
-function tinh_tuoi() {
-    let today, birthday;
-    birthday = document.getElementById('namsinh').value;
+function tinh_tuoi_duong(){
+    let birthday = document.getElementById('birthday').value;
+    let tuoi = tinh_tuoi(birthday)[0];
+    let m = tinh_tuoi(birthday)[2];
+    let d = tinh_tuoi(birthday)[1];
+    document.getElementById('result7').innerHTML = tuoi + " tuổi " + Math.abs(m) + " tháng " + Math.abs(d) + " ngày";
+}
+
+function tinh_tuoi(birthday) {
+    let today;
     date = new Date(birthday);
     today = new Date();
     tuoi = today.getFullYear() - date.getFullYear();
@@ -82,10 +89,9 @@ function tinh_tuoi() {
     d = today.getDate() - date.getDate();
     if (m < 0 || (m >= 0 && today.getDate() < date.getDate())) {
         tuoi--;
-        document.getElementById('result7').innerHTML = tuoi + " tuổi";
-        document.getElementById('result8').innerHTML = "Bạn còn: " + Math.abs(m) + " tháng và: " + Math.abs(d) + " ngày là đến sinh nhật";
+        return [tuoi,d,m];
     }
-    document.getElementById('result7').innerHTML = tuoi + " tuổi " + Math.abs(m) + " tháng " + Math.abs(d) + " ngày";
+    return [tuoi,d,m];
 }
 
 function reset_tuoi() {
@@ -131,4 +137,138 @@ function doi_tien() {
         alert('số tiền phải lớn hơn 0')
     }
 
+}
+
+// ------------------ tank-game ---------------------
+const tankSpeed = 5
+function moveUp() {
+    let currentTop = parseInt(document.getElementById("tank").style["top"]);
+    document.getElementById('tank').style.top = currentTop - tankSpeed + "px";
+
+}
+
+function moveDown() {
+    let currentDown = parseInt(document.getElementById('tank').style["top"]);
+    document.getElementById('tank').style["top"] = currentDown + tankSpeed + "px";
+}
+
+function moveLeft() {
+    let currentLeft = parseInt(document.getElementById('tank').style["left"]);
+    document.getElementById('tank').style["left"] = currentLeft - tankSpeed + "px";
+}
+
+function moveRight() {
+    let currentRight = parseInt(document.getElementById('tank').style["left"]);
+    document.getElementById('tank').style["left"] = currentRight + tankSpeed + "px";
+}
+
+/* --------------------------- Doi Lich Am ----------------------------------- */
+
+function can(birthday) {
+    let date = new Date(birthday);
+    let year = date.getFullYear();
+    let can = year % 10;
+    let namCan = '';
+
+    // -------------- tinh can ------------------
+    if (can == 0) {
+        namCan = "Canh";
+    } 
+    else if (can == 1) {
+        namCan = "Tân";
+    }
+    else if (can == 2) {
+        namCan = "Nhâm";
+    }
+    else if (can == 3) {
+        namCan = "Quý";
+    }
+    else if (can == 4) {
+        namCan = "Giáp";
+    }
+    else if (can == 5) {
+        namCan = "Ất";
+    }
+    else if (can == 6) {
+        namCan = "Bính";
+    }
+    else if (can == 7) {
+        namCan = "Đinh";
+    }
+    else if (can == 8) {
+        namCan = "Mậu";
+    }
+    else if (can == 9) {
+        namCan = "Kỷ";
+    }
+
+    return namCan
+}
+
+// -------------- tinh chi ------------------
+
+function chi(birthday){
+    let date = new Date(birthday);
+    let year = date.getFullYear();
+    let chi= year % 12;
+    let namChi = '';
+
+    if(chi == 0){
+        namChi = "Thân";
+    }
+    else if(chi == 1){
+        namChi = "Dậu";
+    }
+    else if(chi == 2){
+        namChi = "Tuất";
+    }
+    else if(chi == 3){
+        namChi = "Hợi";
+    }
+    else if(chi == 4){
+        namChi = "TÝ";
+    }
+    else if(chi == 5){
+        namChi = "Sửu";
+    }
+    else if(chi == 6){
+        namChi = "Dần";
+    }
+    else if(chi == 7){
+        namChi = "Mẹo";
+    }
+    else if(chi == 8){
+        namChi = "Thìn";
+    }
+    else if(chi == 9){
+        namChi = "Tỵ";
+    }
+    else if(chi == 10){
+        namChi = "Ngọ";
+    }
+    else if(chi == 11){
+        namChi = "Mùi";
+    }
+    return namChi;
+}
+
+function doi_lich_am(){
+    let bBirthday = document.getElementById('boy-date').value;
+    let gBirthday = document.getElementById('girl-date').value;
+    let bcan = can(bBirthday);
+    let bchi = chi(bBirthday);
+    let gcan = can(gBirthday);
+    let gchi = chi(gBirthday);
+    let btuoi = tinh_tuoi(bBirthday)[0];
+    let gtuoi = tinh_tuoi(gBirthday)[0];
+    document.getElementById('result-b').innerHTML = bcan + " " + bchi + " " + btuoi + " Tuổi";
+    document.getElementById('result-g').innerHTML = gcan + " " + gchi + " " + gtuoi + " Tuổi";
+    console.log(test = Math.abs(btuoi-gtuoi)%3);
+    if((Math.abs(btuoi-gtuoi))%3 == 0){
+        document.getElementById('result-kq').innerHTML = "2 bạn không hợp";
+    }else if((Math.abs(btuoi-gtuoi))%4 == 0){
+        document.getElementById('result-kq').innerHTML = "2 bạn tam hợp";
+    }else{
+        document.getElementById('result-kq').innerHTML = "Hên xui";
+    }
 }

@@ -10,10 +10,9 @@ body {
   box-sizing: border-box;
 }
 /*------------------- vartyop --------------------*/
-.wrapper {
-  justify-content: space-between;
+.wrapper, .wrapper-ifelse {
+  justify-content: center;
   margin-top: 80px;
-  
 }
 
 .card {
@@ -22,7 +21,7 @@ body {
   border-radius: 10px;
   margin: 20px;
   min-width: 300px;
-  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 5px 10px 30px rgba(88, 75, 75, 0.3);
   float: left;
   background: #fff;
 }
@@ -34,7 +33,7 @@ body {
   color: #ffffff;
   text-align: center;
   line-height: 40px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 9px 9px 0px 0px;
   font-size: 0.8rem;
   font-weight: 500;
   outline: none;
@@ -59,7 +58,7 @@ input[type="number"] {
   background: #f1f1f1;
 }
 
-.btn_vto {
+.btn_vto,.btn-ifelse {
   width: 70%;
   height: 44px;
   align-items: center;
@@ -72,7 +71,7 @@ input[type="number"] {
   font-size: 1.2rem;
 }
 
-.btn_vto:hover {
+.btn_vto:hover, .btn-ifelse:hover {
   background-color: #4ae75f;
   transition: all ease 0.2s;
 }
@@ -101,9 +100,10 @@ input[type="number"] {
   font-size: 0.7rem;
 }
 
-.footer_cards {
+.footer_cards, .card-footer {
   text-align: center;
   margin-top: 20px;
+  height: auto;
 }
 
 #amount, #currency ,.sl_c{
@@ -552,9 +552,114 @@ nav ul li a:hover {
 }
 
 /*--------------------- Game-Tank-------------------------- */
+
+#body-tank{
+  background: #5372f0;
+  display: flex;
+}
+
 .game-board{
   border: solid 5px greenyellow;
   width: 480px;
   height: 480px;
-  margin: 10px auto;
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+}
+
+.tank-control{
+  width: 200px;
+  margin: auto;
+  height: 200px;
+  align-items: center;
+}
+
+table, tr, td{
+  text-align: center;
+}
+table{
+  width: 100%;
+  height: 100%;
+}
+
+.btn_tank{
+  padding: 10px;
+  background: rgb(228, 222, 222);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.btn_tank i{
+  font-size: 30px;
+  color: #c8892a;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.btn_tank i:hover{
+  color: #6b4408;
+}
+
+#tank{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+
+/* --------- IF-ELSE --------- */
+
+#body-ifelse{
+  background: #5372f0;
+}
+
+.sec-ifelse{
+  width: 60%;
+  min-height: 350px;
+  border-radius: 10px;
+  margin: 10% auto;
+  min-width: 300px;
+  box-shadow: 5px 10px 30px rgba(88, 75, 75, 0.3);
+  background: #fff;
+}
+
+.card-content{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content-birth{
+  align-items: center;
+  text-align: center;
+}
+
+.card-birth{
+  width: 45%;
+  margin: 20px;
+  min-height: 100px;
+  min-width: 200px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 5px 10px 30px rgba(88, 75, 75, 0.3);
+  background: #fff;
+}
+
+.card-tilte{
+  background: rgb(69, 207, 115);
+  color: #fff;
+  padding: 1px;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  font-family: "Poppins" sans-serif;
+  font-weight: 300;
+}
+
+.result-else{
+  color: #416cdf;
+}
+
+#result-else{
+  border: solid 1px;
 }
