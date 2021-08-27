@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Calculator</title>
 </head>
+
 <body class="bg_cal">
     <!-- navigation -->
     <nav>
@@ -21,21 +23,28 @@
             <li><a href="#">Recent</a></li>
             <li class="dropdown">
                 <a href="#">Bài tập Code Gym</a>
-                <div class="dropdown-content">
-                    <a href="./vartyop.html">Variable</a>
-                    <a href="./caculator.html">Calculator</a>
-                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="./vartyop.html">Variable</a></li>
+                    <li><a href="./caculator.html">Calculator</a></li>
+                    <li class="dropdown-submenu">
+                        <a href="#">If...Else</a>
+                        <ul class="submenu-content">
+                            <li><a href="./gametank.html">Game Tank</a></li>
+                            <li><a href="./ifelse.html">Xem Bói</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
             <li><a href="#">Contact</a></li>
         </ul>
         <!-- say-hey -->
         <a href="#" class="hey">Say Hi!</a>
     </nav>
-    
+
     <!-------------------- Content - Calculator ---------------------->
     <h2 class="title_cal">Calculator</h2>
     <div class="wrapper_cal">
-            <form action="" name="cal">
+        <form action="" name="cal">
             <input type="text" name="diskplay" id="display_cal" placeholder="0" readonly>
             <br>
             <div class="buttons-box">
@@ -57,10 +66,12 @@
                 <input type="button" value="C" class="btn_cal cbtn_cal" onclick="cal.display_cal.value =''">
                 <input type="button" value="0" class="btn_cal" onclick="cal.display_cal.value +='0'">
                 <input type="button" value="/" class="btn_cal mbtn_cal" onclick="cal.display_cal.value +='/'">
-                <input type="button" value="=" class="btn_cal mbtn" onclick="cal.display_cal.value = eval(cal.display_cal.value)">
+                <input type="button" value="=" class="btn_cal mbtn"
+                    onclick="cal.display_cal.value = eval(cal.display_cal.value)">
                 <br>
             </div>
         </form>
     </div>
 </body>
+
 </html>

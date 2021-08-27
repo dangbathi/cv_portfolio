@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>If...Else</title>
 </head>
+
 <body id="body-ifelse">
     <!-- navigation -->
     <nav>
@@ -21,17 +23,24 @@
             <li><a href="#">Recent</a></li>
             <li class="dropdown">
                 <a href="#">Bài tập Code Gym</a>
-                <div class="dropdown-content">
-                    <a href="./vartyop.html">Variable</a>
-                    <a href="./caculator.html">Calculator</a>
-                    <a href="./gametank.html">If...Else</a>
-                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="./vartyop.html">Variable</a></li>
+                    <li><a href="./caculator.html">Calculator</a></li>
+                    <li class="dropdown-submenu">
+                        <a href="#">If...Else</a>
+                        <ul class="submenu-content">
+                            <li><a href="./gametank.html">Game Tank</a></li>
+                            <li><a href="./ifelse.html">Xem Bói</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
             <li><a href="#">Contact</a></li>
         </ul>
         <!-- say-hey -->
         <a href="#" class="hey">Say Hi!</a>
     </nav>
+
     <div class="wrapper-ifelse">
         <section id="boytinhduyen" class="sec-ifelse">
             <div class="card-tilte">
@@ -65,4 +74,5 @@
     </div>
     <script src="./js/vatyop.js"></script>
 </body>
+
 </html>
