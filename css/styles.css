@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-@charset "utf-8";
 body {
   margin: 0px;
   padding: 0px;
@@ -422,7 +421,7 @@ nav ul li a:hover::after, .hey:hover::after{
   padding: 50px 0px;
   background-position: center;
   background-size: 1000px;
-  background-color: #60dce0;
+  background: linear-gradient(-45deg, #23A6D5, #416cdf, #c8892a);
 }
 
 .client-heading {
