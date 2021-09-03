@@ -89,15 +89,17 @@
                 }
             } else if (c.checked == true) {
                 if (f.checked == true) {
-                    document.getElementById('title-cheap').style.color = 'rgb(22, 119, 230)';
                     document.getElementById('title-fast').style.color = 'rgb(230, 95, 17)';
+                    document.getElementById('title-cheap').style.color = 'rgb(22, 119, 230)';
                 } else {
                     document.getElementById('title-cheap').style.color = 'rgb(22, 119, 230)';
+                    document.getElementById('title-fast').style.color = '';
+                    document.getElementById('title-good').style.color = '';
                 }
-
             } else if (f.checked == true) {
                 document.getElementById('title-fast').style.color = 'rgb(230, 95, 17)';
-            }else{
+                document.getElementById('title-cheap').style.color = '';
+            } else {
                 g.checked = true;
                 document.getElementById('title-good').style.color = 'rgb(50, 228, 145)';
                 document.getElementById('title-fast').style.color = '';
