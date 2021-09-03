@@ -186,6 +186,7 @@ nav ul li a:hover {
   box-shadow: 5px 10px 30px rgba(64, 106, 198, 0.3);
   transition: all ease 0.2s;
   border-radius: 4px;
+  width: 100%;
 }
 
 .dropdown {
@@ -638,10 +639,11 @@ table{
   color: #6b4408;
 }
 
-#tank{
+#tank, #boom{
   width: 40px;
   height: 40px;
   position: absolute;
+  border-radius: 4px;
 }
 
 /* --------- IF-ELSE --------- */
@@ -699,4 +701,93 @@ table{
 
 #result-else{
   border: solid 1px;
+}
+
+
+/* ------------------------- Good-Cheap-Fast ----------------------------- */
+
+body.good-cheap-fast{
+  background: linear-gradient(-45deg, #23A6D5, #E73C7E, #EE7752, #23D5AB);
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+} 
+
+.card-good{
+  margin: 120px auto;
+  width: 400px;
+  box-shadow: 5px 10px 30px rgba(88, 75, 75, 0.3);
+  border-radius: 6px;
+  background: linear-gradient(-45deg, #E73C7E, #23A6D5, #23D5AB );
+  color: #fff;
+  min-height: 500px;
+}
+
+.good-title{
+   text-align: center;
+   font-weight: 700;
+   border-radius: 6px;
+   padding: 5px;
+   font-size: 40xp;
+}
+
+.row-good{
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  display: flex;
+}
+
+.row-good h2{
+  width: 45%;
+  text-align: center;
+  padding: 0;
+  margin: auto 40px;
+  font-size: 40px;
+  font-weight: 700;
+  right: 0px;
+}
+
+input[type="checkbox"]{
+  width: 80px;
+  height: 40px;
+  appearance: none;
+  background: #c6c6c6;
+  border-radius: 20px;
+  transition: .5s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding-left: 10px;
+}
+
+input#good:checked[type="checkbox"]{
+  background: rgb(50, 228, 145);
+}
+
+input#cheap:checked[type="checkbox"]{
+  background: rgb(22, 119, 230);
+}
+
+input#fast:checked[type="checkbox"]{
+  background: rgb(230, 95, 17);
+}
+
+input[type="checkbox"]:before{
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: scale(1.1);
+  transition: .5s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+input:checked[type="checkbox"]:before{
+  left: 40px;
 }

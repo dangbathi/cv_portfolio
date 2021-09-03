@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="./css/all.min.css">
     <title>Game Tank</title>
 
-
+    <style>
+        canvas {
+            border:1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+        </style>
 </head>
 
 <body id="body-tank">
@@ -34,6 +39,7 @@
                         <ul class="submenu-content">
                             <li><a href="./gametank.html">Game Tank</a></li>
                             <li><a href="./ifelse.html">Xem Bói</a></li>
+                            <li><a href="./goodfastcheap.html">good-cheap</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -48,10 +54,11 @@
 
     <div class="tank-content">
         <div class="game-board">
-            <img src="./images/tank_icon.png" alt="" class="tank-icon" id="tank" style="top: 0px; left: 0px;">
+            <img src="./images/tank_icon.png" id="tank" style="top: 0px; left: 0px;" >
+            <img src="./images/boom.png" alt="boom" id="boom" onload="autoLocation()" >
         </div>
         <!------------------- Tank-Control -------------------->
-        <div class="tank-control">
+        <div class="tank-control" ondrag="collision()">
             <table>
                 <tr>
                     <td></td>
@@ -87,7 +94,6 @@
             </table>
         </div>
     </div>
-
     <script src="./js/vatyop.js"></script>
 </body>
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Good Fast Cheaps</title>
+</head>
+
+<body class="good-cheap-fast">
+    <!-- navigation -->
+    <nav>
+        <!-- logo -->
+        <a href="./index.html" class="logo">
+            <img src="./images/Logo1.png" />
+        </a>
+        <!-- menu -->
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Recent</a></li>
+            <li class="dropdown">
+                <a href="#">Bài tập Code Gym</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./vartyop.html">Variable</a></li>
+                    <li><a href="./caculator.html">Calculator</a></li>
+                    <li class="dropdown-submenu">
+                        <a href="#">If...Else</a>
+                        <ul class="submenu-content">
+                            <li><a href="./gametank.html">Game Tank</a></li>
+                            <li><a href="./ifelse.html">Xem Bói</a></li>
+                            <li><a href="./goodfastcheap.html">good-cheap</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- say-hey -->
+        <a href="#" class="hey">Say Hi!</a>
+    </nav>
+
+    <!------------------ Content Good Fast Cheap -------------------->
+    <div class="container-good">
+        <div class="card-good" onchange="edit()">
+            <div class="good-title">
+                <h1>Good - Cheap - Fast</h1>
+            </div>
+            <div class="row-good">
+                <input type="checkbox" name="check" id="good">
+                <h2 class="check" id="title-good">GOOD</h2>
+            </div>
+            <div class="row-good">
+                <input type="checkbox" name="check" id="cheap">
+                <h2 class="check" id="title-cheap">CHEAP</h2>
+            </div>
+            <div class="row-good">
+                <input type="checkbox" name="check" id="fast">
+                <h2 class="check" id="title-fast">FAST</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        function edit() {
+            let g = document.getElementById('good');
+            let c = document.getElementById('cheap');
+            let f = document.getElementById('fast');
+            if (g.checked == true) {
+                if (c.checked == true) {
+                    if (f.checked == true) {
+                        g.checked = false;
+                        document.getElementById('title-good').style.color = '';
+                        document.getElementById('title-cheap').style.color = 'rgb(22, 119, 230)';
+                        document.getElementById('title-fast').style.color = 'rgb(230, 95, 17)';
+                    } else {
+                        document.getElementById('title-good').style.color = 'rgb(50, 228, 145)';
+                        document.getElementById('title-cheap').style.color = 'rgb(22, 119, 230)';
+                    }
+                } else if (f.checked == true) {
+                    document.getElementById('title-good').style.color = 'rgb(50, 228, 145)';
+                    document.getElementById('title-fast').style.color = 'rgb(230, 95, 17)';
+                    document.getElementById('title-cheap').style.color = '';
+                } else {
+                    document.getElementById('title-good').style.color = 'rgb(50, 228, 145)';
+                    document.getElementById('title-cheap').style.color = '';
+                    document.getElementById('title-fast').style.color = '';
+                }
+            } else if (c.checked == true) {
+                if (f.checked == true) {
+                    document.getElementById('title-cheap').style.color = 'rgb(22, 119, 230)';
+                    document.getElementById('title-fast').style.color = 'rgb(230, 95, 17)';
+                } else {
+                    document.getElementById('title-cheap').style.color = 'rgb(22, 119, 230)';
+                }
+
+            } else if (f.checked == true) {
+                document.getElementById('title-fast').style.color = 'rgb(230, 95, 17)';
+            }else{
+                g.checked = true;
+                document.getElementById('title-good').style.color = 'rgb(50, 228, 145)';
+                document.getElementById('title-fast').style.color = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
