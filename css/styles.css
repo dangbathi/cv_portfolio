@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 @charset "utf-8";
 body {
   margin: 0px;
@@ -124,14 +125,6 @@ input[type="number"] {
   position: relative;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 #main {
   width: 100%;
   height: 100vh;
@@ -148,7 +141,7 @@ nav {
   top: 0;
   width: 100%;
   z-index: 1;
-  background-color: #e0e3f1;
+  background: linear-gradient(-45deg, #23A6D5, #416cdf, #c8892a);
 }
 
 .logo img {
@@ -158,9 +151,10 @@ nav {
 nav ul {
   display: flex;
   min-width: 180px;
+  list-style: none;
 }
 
-nav ul li a {
+nav ul li a, .hey {
   height: 40px;
   line-height: 43px;
   margin: 3px;
@@ -168,24 +162,29 @@ nav ul li a {
   display: flex;
   font-size: 0.8rem;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #585b5b;
+  font-weight: 700;
+  color: #FFF;
   letter-spacing: 1px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 
-.hey {
-  color: #2a60c8;
-  font-weight: 500;
-  font-size: 0.9rem;
-  border-bottom: 2px solid #2a60c8;
+nav ul li a::after, .hey::after {
+  content: '';
+  width: 0%;
+  height: 5px;
+  background: #f12711;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  bottom: 0%; left: 50%;
+  border-radius: 10px;
+  transition: all 500ms ease;
 }
 
-nav ul li a:hover {
-  background-color: #2a60c8;
-  color: #ffffff;
-  box-shadow: 5px 10px 30px rgba(64, 106, 198, 0.3);
-  transition: all ease 0.2s;
-  border-radius: 4px;
+nav ul li a:hover::after, .hey:hover::after{
+  left: 0%;
   width: 100%;
 }
 
@@ -197,7 +196,7 @@ nav ul li a:hover {
 .dropdown-menu, .submenu-content {
   display: none;
   position: absolute;
-  background: #e0e3f1;
+  background: linear-gradient(-45deg, #23A6D5, #416cdf, #c8892a);
   border-radius: 4px;
   box-shadow: 5px 10px 30px rgba(64, 106, 198, 0.3);
   padding-left: 0;
@@ -208,14 +207,9 @@ nav ul li a:hover {
 }
 
 .dropdown .dropdown-menu a {
-  color: #585b5b;
+  justify-content: center;
 }
 
-.dropdown .dropdown-menu a:hover {
-  background: #e0e3f1;
-  margin: 0;
-  border-radius: 4px;
-}
 
 .dropdown-submenu{
   position: relative;
@@ -230,14 +224,6 @@ nav ul li a:hover {
 .submenu-content{
   top: -1px;
   left: 160px;
-}
-
-.hey {
-  color: #2a60c8;
-  font-weight: 500;
-  font-size: 1rem;
-  text-decoration: none;
-  margin-right: 30px;
 }
 
 .model img {
