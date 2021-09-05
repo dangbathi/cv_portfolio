@@ -10,8 +10,8 @@
 </head>
 
 <body>
-     <!----------------- navigation --------------------->
-     <nav>
+    <!----------------- navigation --------------------->
+    <nav>
         <!-- logo -->
         <a href="./index.html" class="logo">
             <img src="./images/Logo1.png" />
@@ -35,6 +35,7 @@
                         </ul>
                     </li>
                     <li><a href="./tracnghiem.html">switch...case</a></li>
+                    <li><a href="./forCalendar.html">For Loop</a></li>
                 </ul>
             </li>
             <li><a href="#">Contact</a></li>
@@ -73,7 +74,7 @@
                 <h2>Câu 2: Đặc điểm của thẻ block trong html?</h2>
                 <div class="traloi-content">
                     <input type="checkbox" id="2a" name="block" value="2a">
-                    <span>Thẻ block có độ rộng bằng độ rộng của thẻ chứa nó.</span>  
+                    <span>Thẻ block có độ rộng bằng độ rộng của thẻ chứa nó.</span>
                 </div>
                 <div class="traloi-content">
                     <input type="checkbox" id="2b" name="block" value="2b">
@@ -133,28 +134,28 @@
             let cau2 = document.querySelector('input[name="block"]:checked');
             let cau3 = document.querySelector('input[name="inline-tag"]:checked');
             let cau4 = document.querySelector('input[name="block-tag"]:checked');
-            if(!cau1){
+            if (!cau1) {
                 alert('vui lòng chọn đáp án câu 1');
-            }else if(!cau2){
+            } else if (!cau2) {
                 alert('vui lòng chọn đáp án câu 2');
-            }else if(!cau3){
+            } else if (!cau3) {
                 alert('vui lòng chọn đáp án câu 3');
-            }else if(!cau4){
+            } else if (!cau4) {
                 alert('vui lòng chọn đáp án câu 4');
-            }else{
-                switch(cau1.value){
+            } else {
+                switch (cau1.value) {
                     case "1a":
                     case "1b":
                     case "1c":
                         mess1 = "câu 1 sai";
                         break;
                     case "1d":
-                        mess1 = "Câu 1 đúng"; 
+                        mess1 = "Câu 1 đúng";
                         break;
                 }
-                
+
             }
-            switch(cau2.value){
+            switch (cau2.value) {
                 case "2a":
                 case "2b":
                     mess2 = "Câu 2 đúng";
@@ -163,7 +164,7 @@
                     mess2 = "Câu 2 sai";
                     break;
             }
-            switch(cau3.value){
+            switch (cau3.value) {
                 case "3a":
                 case "3d":
                     mess3 = "Câu 3 sai";
@@ -173,7 +174,7 @@
                     mess3 = "Câu 3 đúng";
                     break;
             }
-            switch(cau4.value){
+            switch (cau4.value) {
                 case "4a":
                     mess4 = "Câu 4 đúng";
                     break;

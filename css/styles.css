@@ -58,7 +58,7 @@ input[type="number"] {
   background: #f1f1f1;
 }
 
-.btn_vto,.btn-ifelse, .btn-tracnghiem {
+.btn_vto,.btn-ifelse, .btn-tracnghiem, .btn-showday {
   width: 60%;
   height: 44px;
   align-items: center;
@@ -698,7 +698,7 @@ body.good-cheap-fast{
   background-size: 400% 400%;
 } 
 
-.card-good{
+.card-good,.calendar{
   margin: 120px auto;
   width: 400px;
   box-shadow: 5px 10px 30px rgba(88, 75, 75, 0.3);
@@ -706,6 +706,7 @@ body.good-cheap-fast{
   background: linear-gradient(-45deg, #E73C7E, #23A6D5, #23D5AB );
   color: #fff;
   min-height: 500px;
+  padding: 1px;
 }
 
 .good-title, .cauhoi-title{
@@ -793,4 +794,26 @@ body.good-cheap-fast{
   color: #fff;
   padding: 5px;
 }
+
+
+
+/* --------------- for calendar -------------------- */
+
+.calendar{
+  text-align: center;
+}
+
+.calendar-week-day>table {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.calendar-week-day>th,td{
+  padding: 5px;
+}
+
+
+
 

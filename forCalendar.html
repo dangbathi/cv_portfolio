@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>If...Else</title>
+    <title>For Loop</title>
 </head>
 
-<body id="body-ifelse">
-    <!-- navigation -->
+<body>
+    <!--------------------- navigation ------------------------->
     <nav>
         <!-- logo -->
         <a href="./index.html" class="logo">
@@ -43,39 +43,25 @@
         <!-- say-hey -->
         <a href="#" class="hey">Say Hi!</a>
     </nav>
-
-    <div class="wrapper-ifelse">
-        <section id="boytinhduyen" class="sec-ifelse">
-            <div class="card-tilte">
-                <h2>Xem bói tình duyên</h2>
+    <!---------------------- calendar body --------------------->
+    <div class="calendar">
+        <div class="calendar-header">
+            <h2 class="calendar-title">Calendar</h2>
+            <input type="number" name="month" id="month" placeholder="Nhập tháng">
+        </div>
+        <div class="calendar-body">
+            <div class="calendar-week-day" id="calendar-week-day">
             </div>
-            <div class="card-content">
-                <div class="card-birth">
-                    <div class="card-tilte">
-                        <h4>Nhập tuổi bạn nam</h4>
-                    </div>
-                    <div class="card-content-birth">
-                        <input type="date" id="boy-date">
-                        <h2 id="result-b" class="result-else"></h2>
-                    </div>
-                </div>
-                <div class="card-birth">
-                    <div class="card-tilte">
-                        <h4>Nhập tuổi bạn nữ</h4>
-                    </div>
-                    <div class="card-content-birth">
-                        <input type="date" id="girl-date">
-                        <h2 id="result-g" class="result-else"></h2>
-                    </div>
-                </div>
+            <div class="calendar-week-day" id="calendar-week-day-2">
             </div>
-            <div class="card-footer">
-                <button class="btn-ifelse" onclick="doi_lich_am()">Xem bói</button>
-                <h2 id="result-kq" class="result-else"></h2>
+        </div>
+        <div class="calendar-footer">
+            <div class="calendar-result">
+                <button class="btn-showday" onclick="showday()">Show Day</button>
             </div>
-        </section>
+        </div>
     </div>
-    <script src="./js/vatyop.js"></script>
+    <script src="./js/forloop.js"></script>
 </body>
 
 </html>
