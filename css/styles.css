@@ -56,6 +56,7 @@ input[type="number"] {
   margin-top: 6px;
   margin-bottom: 16px;
   background: #f1f1f1;
+  outline: none;
 }
 
 .btn_vto,.btn-ifelse, .btn-tracnghiem, .btn-showday {
