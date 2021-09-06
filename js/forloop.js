@@ -34,9 +34,9 @@ function showday() {
     let month1 = +document.getElementById('month-1').value;
     let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
     let calendar = document.getElementById('calendar-table-1');
-    if (!month) alert("vui lòng nhập tháng cần xem");
+    if (!month1) alert("vui lòng nhập tháng cần xem");
     else if (month1 > 0 && month1 < 13) {
-        nday = checkmonth(month);
+        nday = checkmonth(month1);
         let table = document.createElement("table");
         let headerRow = document.createElement("tr");
         for (a = 0; a < weekdays.length; a++) {
