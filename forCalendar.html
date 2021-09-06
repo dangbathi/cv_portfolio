@@ -45,19 +45,37 @@
     </nav>
     <!---------------------- calendar body --------------------->
     <div class="calendar">
-        <div class="calendar-header">
-            <h2 class="calendar-title">Calendar</h2>
-            <input type="number" name="month" id="month" placeholder="Nhập tháng">
-        </div>
-        <div class="calendar-body">
-            <div class="calendar-week-day" id="calendar-week-day">
+        <div class="calendar-cards">
+            <div class="calendar-header">
+                <h2 class="calendar-title">Calendar</h2>
+                <h2 class="calendar-title">Option 1</h2>
+                <input type="number" id="month-1" placeholder="Nhập tháng">
             </div>
-            <div class="calendar-week-day" id="calendar-week-day-2">
+            <div class="calendar-body">
+                <div class="calendar-week-day" id="calendar-table-1">
+                </div>
+            </div>
+            <div class="calendar-footer">
+                <div class="calendar-result">
+                    <button class="btn-showday" onclick="showday()">Show Day</button>
+                </div>
             </div>
         </div>
-        <div class="calendar-footer">
-            <div class="calendar-result">
-                <button class="btn-showday" onclick="showday()">Show Day</button>
+        <div class="calendar-cards">
+            <div class="calendar-header">
+                <h2 class="calendar-title">Calendar</h2>
+                <h2 class="calendar-title">Option 2</h2>
+                <input type="number" id="month-2" placeholder="Nhập tháng">
+                <input type="number" id="year-2" placeholder="Nhập năm">
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-day" id="calendar-table-2">
+                </div>
+            </div>
+            <div class="calendar-footer">
+                <div class="calendar-result">
+                    <button class="btn-showday" onclick="showCalendar()">Show Day</button>
+                </div>
             </div>
         </div>
     </div>
