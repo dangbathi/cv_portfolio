@@ -699,7 +699,7 @@ body.good-cheap-fast{
   background-size: 400% 400%;
 } 
 
-.card-good,.calendar-cards{
+.card-good,.calendar-cards, .songuyento-cards{
   margin: 120px auto;
   width: 400px;
   box-shadow: 5px 10px 30px rgba(88, 75, 75, 0.3);
@@ -802,9 +802,10 @@ body.good-cheap-fast{
 
 .calendar{
   display: flex;
+  justify-content: center;
 }
 
-.calendar-cards{
+.calendar-cards, .songuyento-cards{
   text-align: center;
 }
 

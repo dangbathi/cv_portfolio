@@ -64,11 +64,6 @@ function showday() {
 }
 
 /* -------------------------------- option 2 ------------------------- */
-
-//test = showCalendar(9,2021);
-
-
-
 function showCalendar() {
     let month = (+document.getElementById("month-2").value) - 1;
     let year = +document.getElementById("year-2").value;
@@ -93,6 +88,7 @@ function showCalendar() {
                 let row2 = document.createElement("tr");
                 for (j = 0; j < 7; j++) {
                     if (i === 0 && j < firstDay) {
+                        //Giá trị những cell trc ngày đầu tiên của tháng  = ""
                         let cell2 = document.createElement("td");
                         cell2.appendChild(document.createTextNode(""));
                         row2.appendChild(cell2);
@@ -114,8 +110,35 @@ function showCalendar() {
 
 function getStartDayOfMonth(month, year) {
     return new Date(year, month, 1).getDay();
+    // return day in week 0 - 6 (index)
 }
 
 function countDayOfMonth(month, year) {
     return new Date(year, month + 1, 0).getDate();
+    // return day in month 1 - 31
+}
+
+/* -------------------------------- In 30 số nguyên tố ------------------------------ */
+
+
+function timsonguyento() {
+    let songuyento = +document.getElementById("songuyento").value;
+    if (!songuyento) alert('Vui lòng nhập vào 1 số');
+    else if (songuyento < 2) alert('Đây không phải là số nguyên tố');
+    else if (songuyento == 2) document.getElementById("songuyento-result").innerHTML = "Số 2 là số nguyên tố";
+    else {
+        for (i = 2; i <= songuyento; i++) {
+            tam = 1;
+            for (j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    tam = 0;
+                    break;
+                }
+            } if (tam == 1){
+                let prime = document.getElementById('songuyento-result');
+                let tnodePrime = document.createTextNode(i+" ");
+                prime.appendChild(tnodePrime);
+            }
+        }
+    }
 }
