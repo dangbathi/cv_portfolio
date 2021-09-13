@@ -1,27 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/vatyop.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Tính Lãi Bank</title>
 </head>
+
 <body>
-     <!-------------- iinh lai suat bank --------------->
-     <section id="laisuatbank" class="modal">
-        <div class="title">
-            <h2>Tính lãi suất Bank</h2>
-        </div>
-        <div class="content">
-            <input type="number" id="tiengui" placeholder="Nhập số tiền gửi">
-            <input type="number" id="time" placeholder="Nhập kỳ hạn">
-        </div>
-        <div class=" footer">
-            <button type="submit" class="btn" onclick="tinh_lai_suat_don()">Submit</button>
-            <h2 id="result4"></h2>
-        </div>
-    </section>
+    <!--------------------- navigation ------------------------->
+    <nav>
+        <!-- logo -->
+        <a href="./index.html" class="logo">
+            <img src="./images/Logo1.png" />
+        </a>
+        <!-- menu -->
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Recent</a></li>
+            <li class="dropdown">
+                <a href="#">Bài tập Code Gym</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./vartyop.html">Variable</a></li>
+                    <li><a href="./caculator.html">Calculator</a></li>
+                    <li class="dropdown-submenu">
+                        <a href="#">If...Else</a>
+                        <ul class="submenu-content">
+                            <li><a href="./gametank.html">Game Tank</a></li>
+                            <li><a href="./ifelse.html">Xem Bói</a></li>
+                            <li><a href="./goodfastcheap.html">good-cheap</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./tracnghiem.html">switch...case</a></li>
+                    <li><a href="./forCalendar.html">For Loop</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- say-hey -->
+        <a href="#" class="hey">Say Hi!</a>
+    </nav>
+    <div class="bank-main">
+        <!-------------- tinh lai suat bank-don --------------->
+        <section id="bank-don" class="modal">
+            <div class="bank-title">
+                <h2>Tính lãi suất Bank</h2>
+            </div>
+            <div class="bank-content">
+                <input type="number" id="tiengui" placeholder="Nhập số tiền gửi">
+                <input type="number" id="time" placeholder="Nhập kỳ hạn">
+            </div>
+            <div class="bank-footer">
+                <button type="submit" class="btn" onclick="tinh_lai_suat_don()">Submit</button>
+                <h2 id="result4"></h2>
+            </div>
+        </section>
+
+        <!-------------- tinh lai suat bank-kep --------------->
+        <section id="bank-kep" class="modal">
+            <div class="bank-title">
+                <h2>Tính lãi suất kép Bank</h2>
+            </div>
+            <div class="bank-content">
+                <select name="bank-ls" id="bank-laikep">
+                    <option value="month">Theo Tháng</option>
+                    <option value="year">Theo năm</option>
+                    <option value="day">Theo ngày</option>
+                </select>
+                <input type="number" id="tiengui" placeholder="Nhập số tiền gửi">
+                <input type="number" id="time" placeholder="Nhập kỳ hạn">
+                <input type="number" id="ls" placeholder="Nhập lãi suất">
+            </div>
+            <div class="bank-footer">
+                <button type="submit" class="btn" onclick="tinh_lai_suat_don()">Submit</button>
+                <h2 id="result4"></h2>
+            </div>
+        </section>
+    </div>
+
     <script src="./js/vatyop.js"></script>
 </body>
+
 </html>

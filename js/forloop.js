@@ -37,6 +37,11 @@ function showday() {
     if (!month1) alert("vui lòng nhập tháng cần xem");
     else if (month1 > 0 && month1 < 13) {
         nday = checkmonth(month1);
+        let html1 = '';
+        html1 += "<table>";
+        for (a = 0; a < weekdays.length; a++) {
+
+        }
         let table = document.createElement("table");
         let headerRow = document.createElement("tr");
         for (a = 0; a < weekdays.length; a++) {
@@ -122,6 +127,7 @@ function countDayOfMonth(month, year) {
 
 
 function timsonguyento() {
+    let html = "";
     let songuyento = +document.getElementById("songuyento").value;
     if (!songuyento) alert('Vui lòng nhập vào 1 số');
     else if (songuyento < 2) alert('Đây không phải là số nguyên tố');
@@ -134,11 +140,102 @@ function timsonguyento() {
                     tam = 0;
                     break;
                 }
-            } if (tam == 1){
-                let prime = document.getElementById('songuyento-result');
-                let tnodePrime = document.createTextNode(i+" ");
-                prime.appendChild(tnodePrime);
+            } if (tam == 1) {
+                html += "<p>" + i + "</p>";
             }
         }
+        document.getElementById("songuyento-result").innerHTML = html;
     }
 }
+
+/* ------------------ in số nguyên tố --------------------  */
+// function firstPrime(a) {
+//     let count = 0;
+//     for (i = 2; count < a; i++) {
+//         if (kiemtrnt(i)) {
+//             document.write(i + " ");
+//             count++;
+//         }
+//     }
+// }
+
+// function kiemtrnt(a) {
+//     for (let j = 2; j <= Math.sqrt(a); j++) {
+//         if (a % j == 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+//}
+
+/* ------------------ in số Fibonaci --------------------  */
+// let a=0;
+// let b=1;
+// let c;
+// let fibonaci = "";
+// for(i=0;i<20; i++){
+//     c = a + b;
+//     a = b;
+//     b = c;
+//     fibonaci += c + " ";
+// }
+// console.log(fibonaci);
+
+/* ------------------ tính tổng các số nhập từ phím --------------------  */
+// let n =0;
+// let sum = 0;
+// while(n != parseInt(-1)){
+//     sum += n;
+//     n = +prompt("nhập số");
+//     console.log(n);
+// }
+// console.log(sum);
+
+/* ------------------ Nhập nhiệt độ trong range --------------------  */
+// let n = +prompt("nhập nhiệt độ");
+// while(n > 100 || n < 20){
+//    if(n<20){
+//       alert("có thể tăng nhiệt độ");
+//       n = +prompt("nhập nhiệt độ tăng");
+//    }else if(n>100){
+//       alert("nhiệt độ giảm");
+//       n = +prompt("nhập nhiệt độ");
+//    }
+// }
+// alert("nhiệt độ ok")
+
+
+/* ------------------ tính lãi kép bank --------------------- */
+
+function laikep() {
+    let optionLs = document.getElementById("bank-laikep").value;
+    let a = +document.getElementById("tiengui").value;
+    let n = +document.getElementById("time").value;
+    let lsbank = +document.getElementById("ls").value;
+    let sum = 0;
+    if (!a) alert("vui lòng nhập số tiền");
+    else if (!n) alert("Vui lòng nhập kỳ hạn");
+    else if (!lsbank) alert("Vui lòng nhập lái suất");
+    else {
+        if (optionLs === "month") {
+            lsbank = lsbank / 12 / 100;
+            sum = tinhlaikep(lsbank, a, n)
+        } else if (optionLs === "year") {
+            tinhlaikep(lsbank, a, n);
+            sum = tinhlaikep(lsbank, a, n);
+        }
+        document.getElementById("bank-result").innerHTML = sum + " VNĐ";
+    }
+
+}
+
+function tinhlaikep(ls, a, n) {
+    let th1 = 0;
+    for (i = 1; i <= n; i++) {
+        th1 = a + (ls * a);
+        a = th1;
+    }
+    return th1;
+}
+
+

@@ -81,7 +81,6 @@
         <div class="songuyento-cards">
             <div class="songuyento-header">
                 <h2 class="songuyento-title">Tìm số nguyên tố</h2>
-                <h2 class="songuyento-title">Option 2</h2>
                 <input type="number" id="songuyento" placeholder="Nhập số cần kiểm tra">
             </div>
             <div class="songuyento-body">
@@ -92,6 +91,24 @@
                 <div class="songuyento-result">
                     <button class="btn-showday" onclick="timsonguyento()">Show Day</button>
                 </div>
+            </div>
+        </div>
+        <div class="bank-card">
+            <div class="bank-title">
+                <h2>Tính lãi suất kép Bank</h2>
+            </div>
+            <div class="bank-content">
+                <input type="number" id="tiengui" placeholder="Nhập số tiền gửi">
+                <input type="number" id="time" placeholder="Nhập kỳ hạn">
+                <input type="number" id="ls" placeholder="Nhập lãi suất">
+                <select name="bank-ls" id="bank-laikep">
+                    <option value="month">Theo Tháng</option>
+                    <option value="year">Theo năm</option>
+                </select>
+            </div>
+            <div class="bank-footer">
+                <button type="submit" class="btn" onclick="laikep()">Submit</button>
+                <h2 id="bank-result"></h2>
             </div>
         </div>
     </div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let html1 = '';
+        for (i = 1; i <= 5; i++) {
+            for(j=1;j<=5;j++){
+                if(i == 1 || i == 5 || j == 1 || j == 5){
+                    html1 += "*&nbsp&nbsp";
+                }else{
+                    html1 += "&nbsp&nbsp&nbsp&nbsp";
+                }
+            }
+            html1 += "<br>";
+        }
+        html1 += "<hr>"
+        document.write(html1);
+        
+        let html = '';
+        for (i = 1; i <= 5; i++) {
+            for(j=1;j<=5;j++){
+                if(i == 1 || i == 5 || j == 1 || j == 5){
+                    html += "["+i + "-" + j + "]" + "&nbsp";
+                }else{
+                    html += "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                }
+            }
+            html += "<br>";
+        }
+        document.write(html);
+
+        
+
+    </script>
+</body>
+
+</html>
