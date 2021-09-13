@@ -222,6 +222,7 @@ function laikep() {
             sum = tinhlaikep(lsbank, a, n)
         } else if (optionLs === "year") {
             tinhlaikep(lsbank, a, n);
+            lsbank = lsbank/100;
             sum = tinhlaikep(lsbank, a, n);
         }
         document.getElementById("bank-result").innerHTML = sum + " VNĐ";
@@ -229,13 +230,22 @@ function laikep() {
 
 }
 
-function tinhlaikep(ls, a, n) {
-    let th1 = 0;
-    for (i = 1; i <= n; i++) {
-        th1 = a + (ls * a);
-        a = th1;
-    }
-    return th1;
-}
+ function tinhlaikep(ls, a, n) {
+     let th1 = 0;
+     for (i = 1; i <= n; i++) {
+         th1 = a + (ls * a);
+         a = th1;
+     }
+     return th1;
+ }
 
-
+// function tinhlaikep(ls,a ,n){
+//     let th1 = 0;
+//     let i = 1;
+//     while(i<=n){
+//         th1 = a + (ls * a);
+//         a = th1;
+//         i++;
+//     }
+//     return th1;
+// }
